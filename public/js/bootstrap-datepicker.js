@@ -1653,7 +1653,8 @@
 	var locale_opts = $.fn.datepicker.locale_opts = [
 		'format',
 		'rtl',
-		'weekStart'
+		'weekStart',
+		'language'
 	];
 	$.fn.datepicker.Constructor = Datepicker;
 	var dates = $.fn.datepicker.dates = {
