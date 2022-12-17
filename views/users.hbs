@@ -10,7 +10,7 @@
   <div class="col-md-3 col-md-offset-6">
     <div class="btn-group pull-right">
       <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Nieuwe werknemer toevoegen
+        Eén toevoegen
         <span class="caret"></span>
         <span class="sr-only">Toggle Dropdown</span>
       </button>
@@ -25,7 +25,7 @@
       <button
         class="btn btn-link pull-right single-click"
         type="submit"
-        data-content="Download current page as .CSV file"
+        data-content="Download huidige pagina als .CSV bestand"
         data-placement="top"
         data-toggle="popover"
         data-trigger="focus hover"
@@ -59,7 +59,7 @@
       <tr data-vpp-user-row="{{this.user_id}}">
         <td class="user-link-cell"><a href="/users/edit/{{this.user_id}}/">{{#unless this.is_active}}<s>{{/unless}}{{this.user_full_name}}{{#unless this.is_active}}</s>{{/unless}}</a></td>
         <td class="user_department"><a href="/settings/departments/edit/{{ this.department_id }}/">{{this.department_name}}</a></td>
-        <td>{{# if this.is_admin }}Yes{{else}}{{/if}}</td>
+        <td>{{# if this.is_admin }}Ja{{else}}{{/if}}</td>
         <td class="vpp-days-remaining">{{ this.number_of_days_available_in_allowance }}</td>
         <td class="vpp-days-used">{{this.number_of_days_taken_from_allowance}}</td>
       </tr>
