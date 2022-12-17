@@ -65,9 +65,9 @@
   <div class="form-group">
     <label for="use_bank_holidays_inp" class="control-label">
       <input class="" id="use_bank_holidays_inp" name="include_public_holidays" type="checkbox" {{# if department.include_public_holidays}} checked="checked"  {{/if}} >
-      Incusief feestdagen
+      Feestdagen bovenop tegoed
     </label>
-    <span class="help-block">Bepaald als de werknemers van de afdeling {{department.name}} ook <a href="/settings/general"/>feestdagen</a> extra hebben naast hun tegoed</span>
+    <span class="help-block">Bepaald als de werknemers van de afdeling {{department.name}} de <a href="/settings/general"/>feestdagen</a> bovenop hun tegoed krijgen.</span>
   </div>
 
   <div class="form-group">
@@ -75,7 +75,7 @@
       <input class="" id="is_accrued_allowance_inp" name="is_accrued_allowance" type="checkbox" {{# if department.is_accrued_allowance}} checked="checked" {{/if}} >
       Opgespaard tegoed
     </label>
-    <span class="help-block">Wanneer ingechakeld bouwt het tegoed zich op over de loop van het jaar. bv: na 6 maanden beschikt de werknemer over de helft van ijn totale tegoed.</span>
+    <span class="help-block">Wanneer ingechakeld bouwt het tegoed zich op over de loop van het jaar. bv: na 6 maanden beschikt de werknemer over de helft van zijn totale tegoed.</span>
   </div>
 </div>
 
