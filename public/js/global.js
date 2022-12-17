@@ -34,7 +34,7 @@ $(document).ready(function(){
 !function(a){
   a.fn.datepicker.dates["en-GB"] = {
     days : [
-      "Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"
+      "Zondag","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"
     ],
     daysShort : [
       "Sun","Mon","Tue","Wed","Thu","Fri","Sat"

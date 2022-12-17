@@ -9,9 +9,9 @@
 }}
 
 <dl>
-  <dt>Opbouw tegoed
+  <dt>Opbouw van uw tegoed
     <i class="fa fa-question-circle"
-      data-content="This is explanation how we get the total allowance. Hover on each number to get details what does one mean."
+      data-content="Dit is een overzicht hoe uw totaal tegoed wordt berekend, zweef met de muis over een punt voor meer uitleg"
       data-placement="top"
       data-toggle="popover"
       data-trigger="focus hover"
@@ -20,7 +20,7 @@
     <dd>
       <em>Normaal tegoed </em>
       <span class="pull-right"
-        data-content="Allowance derived from department current user belongs to."
+        data-content="Normaal tegoed van de huidige afdeling"
         data-placement="top"
         data-toggle="popover"
         data-trigger="focus hover"
@@ -30,7 +30,7 @@
     <dd>
       <em>Overgedragen van {{#if previous_year}}{{previous_year}}{{else}}vorig jaar{{/if}}</em>
       <span class="pull-right"
-        data-content="Allowance carried over from previous year. Note: this amount is calculated on the very first day of the year."
+        data-content="Tegoed overgezet van vorig jaar. opm: Dit wordt automatisch berekend op de eerste dag van het nieuwe jaar."
         data-placement="top"
         data-toggle="popover"
         data-trigger="focus hover"
@@ -40,16 +40,16 @@
     <dd>
       <em>Individuele aanpassingen</em>
       <span class="pull-right"
-        data-content="Adjustment to allowance done by admin user."
+        data-content="Aanpassingen gemaakt door beheerder"
         data-placement="top"
         data-toggle="popover"
         data-trigger="focus hover"
       >{{ user_allowance.manual_adjustment }}</span>
     </dd>
     <dd>
-      <em>Start/einde van de tewerkstelling</em>
+      <em>Start van de tewerkstelling</em>
       <span class="pull-right"
-        data-content="Automatic adjustment to allowance based on employee's start and end day of employment."
+        data-content="Automatische aanpassing in functie van aantal jaren dienst"
         data-placement="top"
         data-toggle="popover"
         data-trigger="focus hover"
@@ -58,7 +58,7 @@
     <dd>
       <em>Momenteel opgebruikt</em>
       <span class="pull-right"
-        data-content="Number of days already taken from allowance."
+        data-content="Aantal dagen die al zijn opgebruikt"
         data-placement="top"
         data-toggle="popover"
         data-trigger="focus hover"
@@ -68,7 +68,7 @@
       <dd>
         <em>Momenteel vastgezet</em>
         <span class="pull-right"
-          data-content="Number of unavailable days in allowance due to accrual nature of vacation entitlement."
+          data-content="Aantal dagen die nog vrij gaan komen dit jaar door opbouw"
           data-placement="top"
           data-toggle="popover"
           data-trigger="focus hover"
