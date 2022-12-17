@@ -12,10 +12,10 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
+    "username": "timeoff",
+    "password": "timeoff",
+    "database": "timeoff",
+    "host": "timeoff_db",
     "dialect": "mysql"
   }
 }
