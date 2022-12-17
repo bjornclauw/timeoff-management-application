@@ -32,7 +32,7 @@ $(document).ready(function(){
  *
  * */
 !function(a){
-  a.fn.datepicker.dates["nl-NL"] = {
+  a.fn.datepicker.dates["en-GB"] = {
     days : [
       "Zondag","Maandag","Dinsdag","Woensdag","Donderdag","Vrijdag","Zaterdag"
     ],

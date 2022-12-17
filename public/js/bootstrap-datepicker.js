@@ -1630,7 +1630,7 @@
 		forceParse: true,
 		format: 'mm/dd/yyyy',
 		keyboardNavigation: true,
-		language: 'nl',
+		language: 'en',
 		minViewMode: 0,
 		maxViewMode: 2,
 		multidate: false,
@@ -1657,7 +1657,7 @@
 	];
 	$.fn.datepicker.Constructor = Datepicker;
 	var dates = $.fn.datepicker.dates = {
-		nl: {
+		en: {
 			days: ["Zondag", "Maandag", "Dinsdag", "Woensdag", "Donderdag", "Vrijdag", "Zaterdag"],
 			daysShort: ["Zon", "Maa", "Din", "Woe", "Don", "Vri", "Zat"],
 			daysMin: ["Zo", "Ma", "Di", "Wo", "Do", "Vr", "Za"],
