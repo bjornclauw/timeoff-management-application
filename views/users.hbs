@@ -1,7 +1,7 @@
 
 {{> header }}
 
-<h1>Staff</h1>
+<h1>Personeel</h1>
 
 {{> show_flash_messages }}
 
@@ -10,13 +10,13 @@
   <div class="col-md-3 col-md-offset-6">
     <div class="btn-group pull-right">
       <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Add new employee
+        Nieuwe werknemer toevoegen
         <span class="caret"></span>
-        <span class="sr-only">Toggle Dropdown</span>
+        <span class="sr-only">Toggle uitklappen</span>
       </button>
       <ul class="dropdown-menu">
-        <li><a href="/users/import/" id="import_users_btn">Import employees</a></li>
-        <li><a href="/users/add/" id="add_new_department">Add single employee</a></li>
+        <li><a href="/users/import/" id="import_users_btn">Importeer werknemers</a></li>
+        <li><a href="/users/add/" id="add_new_department">Enkele werknemer toevoegen</a></li>
       </ul>
     </div>
     <form action="/users/" method="GET">
@@ -37,7 +37,7 @@
 <div class="row">&nbsp;</div>
 
 <div class="col-md-3 list-group all-departments">
-  <a href="/users/" class="list-group-item{{#unless department_id }} selected-item{{/unless}}">All departments</a>
+  <a href="/users/" class="list-group-item{{#unless department_id }} selected-item{{/unless}}">Alle afdelingen</a>
   {{#each company.departments}}
     <a class="list-group-item {{#if_equal ../department_id this.id}} selected-item{{/if_equal}}" href="/users/?department={{this.id}}">{{this.name}}</a>
   {{/each}}
@@ -47,11 +47,11 @@
   <table class="table table-hover">
     <thead>
       <tr>
-        <th>Name</th>
-        <th>Department</th>
-        <th>Is Administrator?</th>
-        <th>Available allowance</th>
-        <th>Days used</th>
+        <th>Naam</th>
+        <th>Afdeling</th>
+        <th>Is beheerder?</th>
+        <th>Beschikbaar tegoed</th>
+        <th>Dagen opgebruikt</th>
       </tr>
     </thead>
     <tbody>

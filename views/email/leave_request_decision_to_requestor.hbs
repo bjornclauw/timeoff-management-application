@@ -1,9 +1,9 @@
-Leave request was {{#if_equal action 'approve'}}accepted{{else}}denied{{/if_equal}}
+Aanvraag werd {{#if_equal action 'approve'}}goedgekeurd{{else}}afgewezen{{/if_equal}}
 =====
-<p>Hello <strong>{{#with requester}}{{this.full_name}}{{/with}}</strong>,</p>
+<p>Hallo <strong>{{#with requester}}{{this.full_name}}{{/with}}</strong>,</p>
 
 {{> email/leave_comments comments=comments }}
 
-<p>{{#with approver }}{{this.full_name}}{{/with}} decided to <strong>{{action}}</strong> your {{#if was_pended_revoke}}cancellation of {{/if}}leave request <strong>{{>leave_request_detail leave=leave }}</strong>.</p>
+<p>{{#with approver }}{{this.full_name}}{{/with}} besliste om <strong>{{action}}</strong> uw {{#if was_pended_revoke}}afwijzen van {{/if}}aanvraag <strong>{{>leave_request_detail leave=leave }}</strong>.</p>
 
-<p>Thanks</p>
+<p>Alvast bedankt</p>

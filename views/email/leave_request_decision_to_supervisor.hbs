@@ -1,9 +1,9 @@
-Leave request decision is made
+Aanvraag beslissing genomen
 =====
 <p>Hello <strong>{{#with approver }}{{this.full_name}}{{/with}}</strong>,<p>
 
 {{> email/leave_comments comments=comments }}
 
-<p>You just processed {{#if was_pended_revoke}}cancellation of {{/if}}leave request {{>leave_request_detail leave=leave }} for {{#with requester}}{{this.full_name}}{{/with}}: to {{action}}.</p>
+<p>U verwerkte net {{#if was_pended_revoke}}het annuleren van {{/if}}aanvraag {{>leave_request_detail leave=leave }} voor {{#with requester}}{{this.full_name}}{{/with}}: to {{action}}.</p>
 
-<p>Thanks</p>
+<p>Alvast bedankt</p>

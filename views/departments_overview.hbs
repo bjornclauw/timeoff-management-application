@@ -1,14 +1,14 @@
 
 {{> header }}
 
-<h1>Departments</h1>
+<h1>Afdelingen</h1>
 
 {{> show_flash_messages }}
 
 <div class="row">
-  <div class="col-md-4 lead">All departments</div>
+  <div class="col-md-4 lead">Alle afdelingen</div>
   <div class="col-md-4 col-md-offset-4">
-    <button class="btn btn-info pull-right" data-toggle="modal" data-target="#add_new_department_modal" type="button" id="add_new_department_btn">Add new department</button>
+    <button class="btn btn-info pull-right" data-toggle="modal" data-target="#add_new_department_modal" type="button" id="add_new_department_btn">Nieuwe afdeling toevoegen</button>
   </div>
 </div>
 
@@ -18,7 +18,7 @@
 
 {{# unless departments.length }}
 <div class="row">
-    <div class="col-md-4">No department records</div>
+    <div class="col-md-4">Geen afdelingsgegevens</div>
 </div>
 {{/unless}}
 
@@ -28,11 +28,11 @@
     <table class="table table-hover">
       <thead>
         <tr>
-          <th>Name</th>
-          <th>Manager</th>
-          <th>Allowance</th>
-          <th>Number Employees</th>
-          <th>Public Holidays
+          <th>Naam</th>
+          <th>Beheerder</th>
+          <th>Tegoed</th>
+          <th>Aantal erknemers</th>
+          <th>Feestdagen
             <button type="button"
               class="btn btn-xs btn-link"
               data-content="If set to YES, employees from department have Bank Holidays added on top of their allowance"
@@ -43,7 +43,7 @@
               <span class="fa fa-question-circle"> </span>
             </button>
           </th>
-          <th>Accrued Allowance
+          <th>Opbouwend tegoed
             <button type="button"
               class="btn btn-xs btn-link"
               data-content="If set to YES, holiday allowance starts to build up - or accrue - from the first day of employment. It accrues in proportion to the annual entitlement. E.g. an employee in the ninth month of employment would have built up 9/12ths (or three-quarters) of annual entitlement."

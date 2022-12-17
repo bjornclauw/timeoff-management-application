@@ -1,9 +1,9 @@
 
 {{> header }}
 
-<h1>My feeds</h1>
+<h1>Mijn feeds</h1>
 
-<p class="lead">Feeds for external calendars</p>
+<p class="lead">Feeds voor externe kalenders</p>
 
 {{> show_flash_messages }}
 
@@ -16,21 +16,21 @@
     <div class="row">
       <div class="col-md-12">
 
-        <p class="description-paragraph">Share your TimeOff.Management data with external calendar providers such as Microsoft Outlook, Apple Calendar (iCal) or Google Calendar.</p>
+        <p class="description-paragraph">Deel uw kalender met externe kalenders, zoals outlook of google kalender</p>
 
         <p class="description-paragraph">We provide following streams from:</p>
         <p class="description-paragraph">
-          <a href="/calendar/">My Calendar</a> page - feeds all data from My Calendar page
+          <a href="/calendar/">Mijn kalender</a> pagina - data van Mijn kalender
         </p>
         {{# unless keep_team_view_hidden}}
         <p class="description-paragraph">
-          <a href="/calendar/teamview/">Team view</a> page - feeds Team view data for current month
+          <a href="/calendar/teamview/">Afdelingsovericht</a> pagina - data van Afdelingsoverzicht voor deze maand
         </p>
         {{/ unless}}
 
-        <p class="description-paragraph">To export particular feed into default calendar application just click on corresponding link.</p>
+        <p class="description-paragraph">Om een bepaald zicht te exporteren, klik op de link.</p>
 
-        <p class="description-paragraph">Otherwise copy the link location and pass it to external application.</p>
+        <p class="description-paragraph">Anders kan u de link kopieren en plakken.</p>
 
       </div>
     </div>
@@ -39,7 +39,7 @@
 
       <div class="col-md-5 well">
         <form method="POST" action="/calendar/feeds/regenerate/">
-        <a href="webcal://{{current_host}}/feed/{{calendar_feed.feed_token}}/ical.ics">My calendar feed <i class="fa fa-rss"></i></a>
+        <a href="webcal://{{current_host}}/feed/{{calendar_feed.feed_token}}/ical.ics">Mijn kalender feed <i class="fa fa-rss"></i></a>
 
         <input type="hidden" name="token" value="{{calendar_feed.feed_token}}"/>
         <button type="submit" class="close" aria-label="Close"><span aria-hidden="true"><i class="fa fa-trash"></i></span></button>
@@ -49,7 +49,7 @@
       {{# unless keep_team_view_hidden }}
       <div class="col-md-5 col-md-offset-2 well">
         <form method="POST" action="/calendar/feeds/regenerate/">
-        <a href="webcal://{{current_host}}/feed/{{team_view_feed.feed_token}}/ical.ics">Team view feed <i class="fa fa-rss"></i></a>
+        <a href="webcal://{{current_host}}/feed/{{team_view_feed.feed_token}}/ical.ics">Afdelingsoverzicht feed <i class="fa fa-rss"></i></a>
 
         <input type="hidden" name="token" value="{{team_view_feed.feed_token}}"/>
         <button type="submit" class="close" aria-label="Close"><span aria-hidden="true"><i class="fa fa-trash"></i></span></button>
