@@ -62,7 +62,7 @@ describe('Bulk import of users', function(){
   });
 
   it('Create test .CSV file for the test', function(done){
-    csv_data = [['email', 'voornaam', 'achternam', 'afdeling']];
+    csv_data = [['email', 'voornaam', 'achternaam', 'afdeling']];
 
     let token = (new Date()).getTime();
     for (let i=0; i<10; i++){
