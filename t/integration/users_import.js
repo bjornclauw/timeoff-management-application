@@ -87,7 +87,7 @@ describe('Bulk import of users', function(){
 
   it('Upload user import file', function(done){
     let regex = new RegExp(
-      'Successfully imported users with following emails: '
+      'Gebruikers toegevoegd met volgende email adressen: '
       + csv_data.slice(1).map(it => it[0]).sort().join(', ')
     );
 
