@@ -23,7 +23,7 @@
     <dl>
       {{#with current_user }}
       <dt data-tom-days-available-in-allowance>{{ ../user_allowance.number_of_days_available_in_allowance }}</dt>
-      <dd>Dagen beschikbaar</dd>
+      <dd>Dag / dagen beschikbaar</dd>
       <dd>van de <span data-tom-total-days-in-allowance>{{ ../user_allowance.total_number_of_days_in_allowance }}</span> in tegoed</dd>
       {{/with}}
     </dl>
@@ -53,7 +53,7 @@
       <dt>Details</dt>
       {{~# each supervisors  ~}}
       <dd>
-        <em>{{# if  @first }} Verantoordelijke: {{ else   }}  &nbsp;   {{/ if  }}</em>
+        <em>{{# if  @first }} Verantwoordelijke: {{ else   }}  &nbsp;   {{/ if  }}</em>
         <span class="pull-right"><a href="mailto:{{this.email}}">{{ this.full_name }}</a></span>
       </dd>
       {{~/ each ~}}
@@ -69,7 +69,7 @@
 
 
 <div class="row main-row_header">
-  <div class="col-md-12">Calendar <a href="/calendar/feeds/" data-toggle="tooltip" data-placement="right" title="Export absences  to external calendars"><span class="fa fa-rss"></span></a></div>
+  <div class="col-md-12">Kalender <a href="/calendar/feeds/" data-toggle="tooltip" data-placement="right" title="Exporteer afwezigheden naar externe kalender"><span class="fa fa-rss"></span></a></div>
 </div>
 
 <div class="row">

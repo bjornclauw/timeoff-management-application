@@ -24,11 +24,11 @@
           data-placement="top"
           title="
             {{~#if ../day.leaveLabel ~}}{{~../day.leaveLabel~}}: {{/if~}}
-            {{~#if ../../day.is_current_day}}Today{{/if~}}
-            {{~#if this.is_new_leave}}New absence waiting approval{{/if~}}
-            {{~#if this.is_pended_revoke_leave}}Revoked waiting for approval{{/if~}}
+            {{~#if ../../day.is_current_day}}Vandaag{{/if~}}
+            {{~#if this.is_new_leave}}Nieuwe aanvraag, wachten op goedkeuring{{/if~}}
+            {{~#if this.is_pended_revoke_leave}}Geannuleerd, wachten op goedkeuring{{/if~}}
             {{~#if this.is_approved_leave~}}
-              {{~#unless this.is_pended_revoke_leave}}Approved absence{{/unless~}}
+              {{~#unless this.is_pended_revoke_leave}}Goedgekeurde afwezigheid{{/unless~}}
             {{~/if}}"
         {{/if}}
       {{/with}}
