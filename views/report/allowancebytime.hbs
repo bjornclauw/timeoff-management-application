@@ -4,13 +4,13 @@
 <h1>Allowance usage</h1>
 
 <div class="row">
-  <div class="col-md-6 lead">Shows allowance usage in {{> reports/date_range_pretty same_month=same_month start_date=start_date_obj end_date=end_date_obj}}</div>
+  <div class="col-md-6 lead">Toon tegoeden en verbruik in {{> reports/date_range_pretty same_month=same_month start_date=start_date_obj end_date=end_date_obj}}</div>
 </div>
 
 {{> show_flash_messages }}
 
 <ol class="breadcrumb">
-  <li><a href="/reports/">All reports</a></li>
+  <li><a href="/reports/">Alle rapporten</a></li>
   <li class="active">Allowance usage by time</li>
 </ol>
 
@@ -29,11 +29,11 @@
 
           <div class="col-md-3">
             <div class="form-group">
-              <label for="department_id">Department</label>
+              <label for="department_id">Afdeling</label>
               <select class="form-control" id="department_id" name="department">
                 <option>All</option>
                 {{#each related_departments}}
-                <option value="{{this.id}}" {{#if_equal this.id ../current_department.id}} selected {{/if_equal}}>{{this.name}}</option>
+                <option value="{{this.id}}" {{#if_equal this.id ../current_department.id}} geselecteerd {{/if_equal}}>{{this.name}}</option>
                 {{/each}}
               </select>
             </div>
@@ -41,7 +41,7 @@
 
           <div class="col-md-5 col-md-offset-1">
             <div class="form-group">
-              <label>Date range within single year</label>
+              <label>Beide datums dienen in hetzelfde jaar te liggen</label>
               <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
                 <input type="text" name="start_date" class="form-control" id="start_date" placeholder="From Month"
@@ -56,7 +56,7 @@
                 >
                 <span class="input-group-addon">(YYYY-MM)</span>
               </div>
-              <span class="help-block">Date range must be within a single year</span>
+              <span class="help-block">Datum bereik (binnen hetzelfde jaar)</span>
             </div>
           </div>
 
@@ -71,7 +71,7 @@
                 data-toggle="popover"
                 data-trigger="focus hover"
               ><i class="fa fa-download"></i> .csv</button>
-              <button class="btn btn-success" type="submit">Update results</button>
+              <button class="btn btn-success" type="submit">Update resultaten</button>
             </div>
           </div>
         </div>
@@ -83,14 +83,14 @@
 </form>
 
 <div class="row main-row_header">
-  <span class="col-md-12">Report</span>
+  <span class="col-md-12">Rapport</span>
 </div>
 
 <div class="row">
 
   {{# unless users_and_leaves }}
   <div class="col-md-12 text-muted">
-    There are no users in selected department
+    Er zijn geen gebruikers in de geselecteerde afdeling
   </div>
   {{else}}
 
@@ -98,11 +98,11 @@
     <table class="table table-hover">
       <thead>
         <tr>
-          <th>Employee full name</th>
+          <th>Werknemer</th>
           {{# each users_and_leaves.0.statistics.leave_type_break_down.pretty_version}}
           <th>{{this.name}}</th>
           {{/each}}
-          <th>Days deducted from allowance<br>in {{> reports/date_range_pretty same_month=same_month start_date=start_date_obj end_date=end_date_obj}}</th>
+          <th>Dagen opgenomen van tegoed <br>in {{> reports/date_range_pretty same_month=same_month start_date=start_date_obj end_date=end_date_obj}}</th>
         </tr>
       </thead>
       {{# each users_and_leaves}}
