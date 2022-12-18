@@ -1,4 +1,4 @@
-New leave was added and auto approved.
+Nieuwe aanvraag (automatisch) goedgekeurd
 =====
 <p>Hello <strong>{{#with approver }}{{this.full_name}}{{/with}}</strong>,</p>
 
@@ -6,6 +6,7 @@ New leave was added and auto approved.
 
 {{> email/leave_comments comments=comments }}
 
-<p>There is no need to approve/reject leaves from {{#with requester}}{{this.full_name}}{{/with}}.</p>
+<p>Aanvragen van {{#with requester}}{{this.full_name}}{{/with}} worden automatisch goedgekeurd.</p>
+<p>(Dit kan per werknemer worden ingesteld onder instellingen)</p>
 
 <p>Thanks</p>

@@ -1,14 +1,14 @@
 
 {{> header }}
 
-<h1>Team View</h1>
+<h1>Overzicht afdeling</h1>
 
 <div class="row">
-  <div class="col-md-6 lead">{{logged_user.name}} {{logged_user.lastname}}'s team <a href="/calendar/feeds/" data-toggle="tooltip" data-placement="right" title="Export Team View to external calendars"><span class="fa fa-rss"></span></a></div>
+  <div class="col-md-6 lead">{{logged_user.name}} {{logged_user.lastname}}'s afdeling <a href="/calendar/feeds/" data-toggle="tooltip" data-placement="right" title="Export Team View to external calendars"><span class="fa fa-rss"></span></a></div>
   <div class="col-md-3 col-md-offset-3">
     <div class="btn-group btn-group-sm pull-right" role="group">
-      <a href="/calendar/teamview/?{{> team_view_url_parameters grouped_mode = 0 save_grouped_mode = 1 save_current_department = 1 }}" class="btn btn-default" {{#unless grouped_mode}}disabled=disabled{{/unless}}>All</a>
-      <a href="/calendar/teamview/?{{> team_view_url_parameters grouped_mode = 1 save_grouped_mode = 1 save_current_department = 1 }}" class="btn btn-default" {{#if grouped_mode}}disabled=disabled{{/if}}>By department</a>
+      <a href="/calendar/teamview/?{{> team_view_url_parameters grouped_mode = 0 save_grouped_mode = 1 save_current_department = 1 }}" class="btn btn-default" {{#unless grouped_mode}}disabled=disabled{{/unless}}>Alle</a>
+      <a href="/calendar/teamview/?{{> team_view_url_parameters grouped_mode = 1 save_grouped_mode = 1 save_current_department = 1 }}" class="btn btn-default" {{#if grouped_mode}}disabled=disabled{{/if}}>Per afdeling</a>
     </div>
   </div>
 </div>
@@ -101,11 +101,11 @@
         <td class="team-view-header" colspan="2">
           <div class="dropdown pull-left">
             <button class="btn btn-default dropdown-toggle left-column-cell" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-              {{#if current_department }}{{current_department.name}}{{else}}All departments{{/if}}
+              {{#if current_department }}{{current_department.name}}{{else}}Alle afdelingen{{/if}}
               <span class="caret"></span>
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-              <li><a href="?{{> team_view_url_parameters current_department = null save_current_department = 1 }}">All</a></li>
+              <li><a href="?{{> team_view_url_parameters current_department = null save_current_department = 1 }}">Alle</a></li>
               <li role="separator" class="divider"></li>
               {{#each related_departments}}
               <li><a href="?{{> team_view_url_parameters base_date = ../base_date current_department = this save_current_department = 1 }}">{{this.name}}</a></li>

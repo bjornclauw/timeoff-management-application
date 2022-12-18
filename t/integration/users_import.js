@@ -62,7 +62,7 @@ describe('Bulk import of users', function(){
   });
 
   it('Create test .CSV file for the test', function(done){
-    csv_data = [['email', 'name', 'lastname', 'department']];
+    csv_data = [['email', 'voornaam', 'achternaam', 'afdeling']];
 
     let token = (new Date()).getTime();
     for (let i=0; i<10; i++){
@@ -87,7 +87,7 @@ describe('Bulk import of users', function(){
 
   it('Upload user import file', function(done){
     let regex = new RegExp(
-      'Successfully imported users with following emails: '
+      'Gebruikers toegevoegd met volgende email adressen: '
       + csv_data.slice(1).map(it => it[0]).sort().join(', ')
     );
 

@@ -20,9 +20,9 @@
   <li {{# unless pager.page_prev }} class="disabled" {{/unless}}>
       <span>
         {{#if pager.page_prev}}
-        <a href="?{{#each pager.filter }}{{@key}}={{this}}&{{/each}}page={{pager.page_prev}}">&laquo; Prev</a>
+        <a href="?{{#each pager.filter }}{{@key}}={{this}}&{{/each}}page={{pager.page_prev}}">&laquo; Vorige</a>
         {{else}}
-        &laquo; Prev
+        &laquo; Volgende
         {{/if}}
       </span>
   </li>
@@ -39,9 +39,9 @@
     <span>
 
         {{#if pager.page_next}}
-        <a href="?{{#each pager.filter }}{{@key}}={{this}}&{{/each}}page={{pager.page_next}}">Next &raquo;</a>
+        <a href="?{{#each pager.filter }}{{@key}}={{this}}&{{/each}}page={{pager.page_next}}">Volgende &raquo;</a>
         {{else}}
-        Next &raquo;
+        Volgende &raquo;
         {{/if}}
 
     </span>
