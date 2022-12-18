@@ -7,7 +7,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser   = require('body-parser');
 var moment       = require('moment');
 
-//require('moment/locale/nl');
+require('moment/locale/nl');
 
 const createSessionMiddleware = require('./lib/middleware/withSession');
 
