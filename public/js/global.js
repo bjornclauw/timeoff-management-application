@@ -34,23 +34,23 @@ $(document).ready(function(){
 !function(a){
   a.fn.datepicker.dates["en-GB"] = {
     days : [
-      "Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"
+      "Zondag","Maandag","Dinsdag","Woensdag","Donderdag","Vrijdag","Zaterdag"
     ],
     daysShort : [
-      "Sun","Mon","Tue","Wed","Thu","Fri","Sat"
+      "Zon","Maa","Din","Woe","Don","Vri","Zat"
     ],
     daysMin : [
-      "Su","Mo","Tu","We","Th","Fr","Sa"
+      "Zo","Ma","Di","Wo","Do","Vr","Za"
     ],
     months : [
-      "January","February","March","April","May","June","July","August","September","October","November","December"
+      "Januari","Februari","Maart","April","Mei","Juni","Juli","Augustus","September","Oktober","November","December"
     ],
     monthsShort : [
-      "Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"
+      "Jan","Feb","Maa","Apr","Mei","Jun","Jul","Aug","Sep","Okt","Nov","Dec"
     ],
-    today       : "Today",
-    monthsTitle : "Months",
-    clear       : "Clear",
+    today       : "Vandaag",
+    monthsTitle : "Maanden",
+    clear       : "Wis",
     weekStart   : 1,
     format      : "dd/mm/yyyy"
   }
@@ -171,7 +171,7 @@ $(document).ready(function(){
 
 $(document).ready(function(){
   $('.user-details-summary-trigger').popover({
-    title: 'Employee summary',
+    title: 'Samenvatting werknemer',
     html: true,
     trigger: 'hover',
     placement: 'auto',
@@ -196,7 +196,7 @@ $(document).ready(function(){
 
 $(document).ready(function(){
   $('.leave-details-summary-trigger').popover({
-    title: 'Leave summary',
+    title: 'Samenvatting',
     html: true,
     trigger: 'hover',
     placement: 'auto',
@@ -238,7 +238,7 @@ $(document).ready(function() {
           if (!data || !data.length) {
             badge.addClass('hidden');
             dropDown.empty();
-            dropDown.append('<li class="dropdown-header">No notifications</li>')
+            dropDown.append('<li class="dropdown-header">Geen meldingen</li>')
 
             document.title = document.title.replace(/\(\d+\)\s*/, '');
 
