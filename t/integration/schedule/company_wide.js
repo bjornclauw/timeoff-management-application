@@ -55,31 +55,31 @@ describe("Changing default company wide schedule", function(){
     check_elements_func({
       driver            : driver,
       elements_to_check : [{
-        selector : schedule_form_id + ' input[name="monday"]',
+        selector : schedule_form_id + ' input[name="maandag"]',
         tick     : true,
         value    : 'on',
       },{
-        selector : schedule_form_id + ' input[name="tuesday"]',
+        selector : schedule_form_id + ' input[name="dinsdag"]',
         tick     : true,
         value    : 'on',
       },{
-        selector : schedule_form_id + ' input[name="wednesday"]',
+        selector : schedule_form_id + ' input[name="woensdag"]',
         tick     : true,
         value    : 'on',
       },{
-        selector : schedule_form_id + ' input[name="thursday"]',
+        selector : schedule_form_id + ' input[name="donderdag"]',
         tick     : true,
         value    : 'on',
       },{
-        selector : schedule_form_id + ' input[name="friday"]',
+        selector : schedule_form_id + ' input[name="vrijdag"]',
         tick     : true,
         value    : 'on',
       },{
-        selector : schedule_form_id + ' input[name="saturday"]',
+        selector : schedule_form_id + ' input[name="zaterdag"]',
         tick     : true,
         value    : 'off',
       },{
-        selector : schedule_form_id + ' input[name="sunday"]',
+        selector : schedule_form_id + ' input[name="zondag"]',
         tick     : true,
         value    : 'off',
       }],
@@ -104,31 +104,31 @@ describe("Changing default company wide schedule", function(){
     check_elements_func({
       driver            : driver,
       elements_to_check : [{
-        selector : schedule_form_id + ' input[name="monday"]',
+        selector : schedule_form_id + ' input[name="maandag"]',
         tick     : true,
         value    : 'on',
       },{
-        selector : schedule_form_id + ' input[name="tuesday"]',
+        selector : schedule_form_id + ' input[name="dinsdag"]',
         tick     : true,
         value    : 'on',
       },{
-        selector : schedule_form_id + ' input[name="wednesday"]',
+        selector : schedule_form_id + ' input[name="woensdag"]',
         tick     : true,
         value    : 'off',
       },{
-        selector : schedule_form_id + ' input[name="thursday"]',
+        selector : schedule_form_id + ' input[name="donderdag"]',
         tick     : true,
         value    : 'on',
       },{
-        selector : schedule_form_id + ' input[name="friday"]',
+        selector : schedule_form_id + ' input[name="vrijdag"]',
         tick     : true,
         value    : 'on',
       },{
-        selector : schedule_form_id + ' input[name="saturday"]',
+        selector : schedule_form_id + ' input[name="zaterdag"]',
         tick     : true,
         value    : 'off',
       },{
-        selector : schedule_form_id + ' input[name="sunday"]',
+        selector : schedule_form_id + ' input[name="zondag"]',
         tick     : true,
         value    : 'off',
       }],
