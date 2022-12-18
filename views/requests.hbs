@@ -1,18 +1,18 @@
 
 {{> header }}
 
-<h1>{{logged_user.name}} {{logged_user.lastname}} messages</h1>
+<h1>{{logged_user.name}} {{logged_user.lastname}} berichten</h1>
 
 {{> show_flash_messages }}
 
 <div class="row main-row_header">
-  <p class="col-md-12">Leave request to approve</p>
+  <p class="col-md-12">Aanvraag om goed te keuren</p>
 </div>
 
 <div class="row">
   {{# unless to_be_approved_leaves}}
   <div class="col-md-12 text-muted">
-    There are no leave requests to decide on.
+    Er zijn geen aanvragen.
   </div>
   {{else}}
   <div class="col-md-12">
@@ -21,13 +21,13 @@
     <table class="table table-hover requests-to-approve-table">
       <thead>
         <tr>
-          <th>Employee</th>
-          <th>Department</th>
-          <th>Date of request</th>
-          <th>Leave dates</th>
+          <th>Werknemer</th>
+          <th>Afdeling</th>
+          <th>Datum aanvraag</th>
+          <th>Periode</th>
           <th>Type</th>
-          <th>Days</th>
-          <th class="col-xs-2">Comment</th>
+          <th># dagen totaal</th>
+          <th class="col-xs-2">Opmerkingen</th>
           <th colspan="2"></th>
         </tr>
       </thead>
@@ -40,18 +40,18 @@
           <td>{{this.user.department.name}}</td>
           <td class="date_of_request">{{as_date_from_timestamp this.createdAt}}</td>
           <td data-tom-leave-dates="1"><a class="leave-details-summary-trigger" data-leave-id="{{this.id}}" href="#">{{> leave_dates leave=this}}</a></td>
-          <td>{{#if this.is_pended_revoke_leave}}REVOKE {{/if}}{{this.leave_type.name}}</td>
+          <td>{{#if this.is_pended_revoke_leave}}INTREKKEN VAN {{/if}}{{this.leave_type.name}}</td>
           <td data-vpp="days_used">{{ this.get_deducted_days_number }}</td>
           <td>{{this.comment.comment}}</td>
           <td>
             <form action="/requests/reject/" method="POST">
-            <input class="btn btn-warning single-click" type="submit" value="Reject">
+            <input class="btn btn-warning single-click" type="submit" value="Afwijzen">
             <input type="hidden" value="{{this.id}}" name="request">
             </form>
           </td>
           <td>
             <form action="/requests/approve/" method="POST">
-            <input class="btn btn-success single-click" type="submit" value="Approve">
+            <input class="btn btn-success single-click" type="submit" value="Goedkeuren">
             <input type="hidden" value="{{this.id}}" name="request">
             </form>
           </td>
@@ -68,7 +68,7 @@
 <div class="main-row_header">&nbsp;</div>
 
 <div class="row main-row_header">
-  <p class="col-md-12">All my absences</p>
+  <p class="col-md-12">Al mijn afwezigheden</p>
 </div>
 
 {{> user_requests_grouped grouped_leaves=my_leaves_grouped logged_user=logged_user }}

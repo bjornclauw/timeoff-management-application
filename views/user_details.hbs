@@ -1,13 +1,13 @@
 
 {{> header }}
 
-<h1>{{employee.name}} {{employee.lastname}}'s details {{#with employee }}{{#unless this.is_active}}<span class="badge alert-warning">Deactivated</span>{{/unless}}{{/with}}</h1>
+<h1>Details: {{employee.name}} {{employee.lastname}} {{#with employee }}{{#unless this.is_active}}<span class="badge alert-warning">Deactivated</span>{{/unless}}{{/with}}</h1>
 
 <div class="row">
-    <div class="col-md-3 lead">Employee details</div>
+    <div class="col-md-3 lead">Details werknemer</div>
     <form id="add_new_user_frm" method="post" action="/users/delete/{{employee.id}}/" onsubmit="return confirm('Do you really want to delete the user {{employee.name}} {{employee.lastname}}?');">
         <div class="col-md-1 col-md-offset-8">
-        <button id="remove_btn" type="submit" class="pull-right btn btn-danger single-click" data-toggle="tooltip" data-placement="top" title="Remove employee"><i class="fa fa-trash"></i> Delete</button>
+        <button id="remove_btn" type="submit" class="pull-right btn btn-danger single-click" data-toggle="tooltip" data-placement="top" title="Remove employee"><i class="fa fa-trash"></i> Verwijder</button>
         </div>
     </form>
 </div>
@@ -17,10 +17,10 @@
 {{> show_flash_messages }}
 
 <div class="col-md-3 list-group">
-  <a href="/users/edit/{{employee.id}}/" class="list-group-item{{# if show_main_tab }} selected-item{{/if}}">General details</a>
-  <a href="/users/edit/{{employee.id}}/schedule/" class="list-group-item {{# if show_schedule_tab }} selected-item{{/if}}">Schedule</a>
-  <a href="/users/edit/{{employee.id}}/calendar/" class="list-group-item {{# if show_calendar_tab }} selected-item{{/if}}">Calendar</a>
-  <a href="/users/edit/{{employee.id}}/absences/" class="list-group-item{{# if show_absence_tab }} selected-item{{/if}}">Absences</a>
+  <a href="/users/edit/{{employee.id}}/" class="list-group-item{{# if show_main_tab }} selected-item{{/if}}">Algemene details</a>
+  <a href="/users/edit/{{employee.id}}/schedule/" class="list-group-item {{# if show_schedule_tab }} selected-item{{/if}}">Planning</a>
+  <a href="/users/edit/{{employee.id}}/calendar/" class="list-group-item {{# if show_calendar_tab }} selected-item{{/if}}">Kalender</a>
+  <a href="/users/edit/{{employee.id}}/absences/" class="list-group-item{{# if show_absence_tab }} selected-item{{/if}}">Afwezigheden</a>
 </div>
 
 {{# if show_absence_tab }}

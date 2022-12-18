@@ -196,7 +196,7 @@ $(document).ready(function(){
 
 $(document).ready(function(){
   $('.leave-details-summary-trigger').popover({
-    title: 'Leave summary',
+    title: 'Overzicht',
     html: true,
     trigger: 'hover',
     placement: 'auto',

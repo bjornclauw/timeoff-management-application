@@ -27,8 +27,8 @@
       <dl>
         {{#with current_user }}
         <dt data-tom-days-available-in-allowance>{{ ../user_allowance.number_of_days_available_in_allowance }}</dt>
-        <dd>Days available</dd>
-        <dd>out of <span data-tom-total-days-in-allowance>{{ ../user_allowance.total_number_of_days_in_allowance }}</span> in allowance</dd>
+        <dd>Dagen beschikbaar</dd>
+        <dd>van de <span data-tom-total-days-in-allowance>{{ ../user_allowance.total_number_of_days_in_allowance }}</span> in tegoed</dd>
         {{/with}}
       </dl>
     </div>
@@ -39,15 +39,15 @@
 
     <div class="col-md-4 secondary-leave-type-statistics hidden-xs">
       <dl>
-        <dt>Used</dt>
+        <dt>Gebruikt</dt>
 
         {{# if leave_type_statistics }}
           {{# each leave_type_statistics }}
-            <dd><em>{{this.leave_type.name}}:</em> <span class="pull-right">{{this.days_taken}}{{# if this.limit}} out of {{this.limit}}{{/if}}</span></dd>
+            <dd><em>{{this.leave_type.name}}:</em> <span class="pull-right">{{this.days_taken}}{{# if this.limit}} van de {{this.limit}}{{/if}}</span></dd>
           {{/each}}
         {{else}}
 
-          <dd class="text-muted">No approved requests so far.</dd>
+          <dd class="text-muted">Geen aanvragen.</dd>
         {{/if}}
       </dl>
     </div>
@@ -69,12 +69,12 @@
       </tr>
       <tr>
         <td colspan="2">M</td>
-        <td colspan="2">T</td>
+        <td colspan="2">D</td>
         <td colspan="2">W</td>
-        <td colspan="2">T</td>
-        <td colspan="2">F</td>
-        <td colspan="2">S</td>
-        <td colspan="2">S</td>
+        <td colspan="2">D</td>
+        <td colspan="2">V</td>
+        <td colspan="2">Z</td>
+        <td colspan="2">Z</td>
       </tr>
       </thead>
       <tbody>

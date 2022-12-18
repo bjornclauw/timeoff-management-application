@@ -1,18 +1,18 @@
 
 <div>
-  <strong>Name:</strong> {{userFullName}}.
+  <strong>Naam:</strong> {{userFullName}}.
 </div>
 <div>
-  <strong>Department:</strong> {{departmentName}}.
+  <strong>Afdeling:</strong> {{departmentName}}.
 </div>
 {{#if userAllowance }}
   <div>
-    <strong>Available:</strong> {{userAllowance.number_of_days_available_in_allowance}} days out of {{userAllowance.total_number_of_days_in_allowance}}.
+    <strong>Beschikbaar:</strong> {{userAllowance.number_of_days_available_in_allowance}} dag/dagen van de {{userAllowance.total_number_of_days_in_allowance}}.
   </div>
 {{/if}}
 {{#if supervisorNames}}
   <div>
-    <strong>Approvers:</strong>
+    <strong>Goedkeurders:</strong>
     <ul>
       {{#each supervisorNames}}<li>{{this}}{{#unless @last}},{{/unless}}</li>{{/each}}
     </ul>
