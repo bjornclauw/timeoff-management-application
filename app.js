@@ -6,10 +6,7 @@ var logger       = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser   = require('body-parser');
 var moment       = require('moment');
-<<<<<<< Updated upstream
-=======
 require('moment/locale/nl');
->>>>>>> Stashed changes
 const createSessionMiddleware = require('./lib/middleware/withSession');
 
 var app = express();
