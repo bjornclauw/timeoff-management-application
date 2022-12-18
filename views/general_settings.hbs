@@ -2,9 +2,9 @@
 
 {{> header }}
 
-<h1>Algemene instellingen</h1>
+<h1>General settings</h1>
 
-<p class="lead">Account instellingen</p>
+<p class="lead">Account main settings</p>
 
 {{> show_flash_messages }}
 
@@ -14,7 +14,7 @@
   <div class="col-md-12">
     <div class="panel panel-default">
       <div class="panel-heading">
-        Bedrijf
+        Company
       </div>
       <div class="panel-body">
         <div class="row">
@@ -22,13 +22,13 @@
           <div class="col-md-5">
             <form class="form-horizontal" method="POST" action="/settings/company/" id="company_edit_form">
               <div class="form-group">
-                <label for="input_company_name" class="col-md-4 control-label">Naam bedrijf</label>
+                <label for="input_company_name" class="col-md-4 control-label">Company name</label>
                 <div class="col-md-8">
                   <input class="form-control" id="input_company_name" placeholder="Our company name" value="{{company.name}}" name="name">
                 </div>
               </div>
               <div class="form-group">
-                <label for="input_country" class="col-md-4 control-label">Land</label>
+                <label for="input_country" class="col-md-4 control-label">Country</label>
                 <div class="col-md-8">
                   <select class="form-control" id="input_country" name="country">
                     {{#each countries}}
@@ -38,7 +38,7 @@
                 </div>
               </div>
               <div class="form-group">
-                <label for="input_date_format" class="col-md-4 control-label">Formaat datum</label>
+                <label for="input_date_format" class="col-md-4 control-label">Date format</label>
                 <div class="col-md-8">
                   <select class="form-control" id="input_date_format" name="date_format">
                     {{#with company}}
@@ -52,7 +52,7 @@
 
 
               <div class="form-group">
-                <label for="input_time_zone" class="col-md-4 control-label">Tijdzone</label>
+                <label for="input_time_zone" class="col-md-4 control-label">Time zone</label>
                 <div class="col-md-8">
                   <select class="form-control" id="input_time_zone" name="timezone">
                     {{#each timezones_available}}
@@ -64,7 +64,7 @@
 
 
               <div class="form-group">
-                <label for="input_carry_over" class="col-md-4 control-label">Overgedragen dagen</label>
+                <label for="input_carry_over" class="col-md-4 control-label">Carried over days</label>
                 <div class="col-md-8">
                   <select class="form-control" id="input_carry_over" name="carry_over">
                     {{#each carryOverOptions}}
@@ -72,7 +72,7 @@
                     {{/each}}
                   </select>
                     <p>
-                      <em>Aantal dagen van het werknemers tegoed die worden overdragen naar volgend jaar.</em>
+                      <em>Number of days in employee allowance that are carried over to the next year.</em>
                     </p>
                 </div>
               </div>
@@ -82,10 +82,10 @@
                 <div class="col-md-offset-4 col-md-8">
                   <div class="checkbox">
                     <label for="share-all-absences">
-                      <input id="share-all-absences" type="checkbox" name="share_all_absences" {{# if company.share_all_absences }} checked="checked"{{/if}}>Deel afwezigheden tussen gebruikers
+                      <input id="share-all-absences" type="checkbox" name="share_all_absences" {{# if company.share_all_absences }} checked="checked"{{/if}}>Share absences between employees
                     </label>
                     <p>
-                      <em>Wanneer ingeschakeld kan elke werknemer ieders verlof bekijken, ongeacht de afdeling.</em>
+                      <em>If enabled all employees can see information about everybody's absences regardless departments.</em>
                     </p>
                   </div>
                 </div>
@@ -95,10 +95,10 @@
                 <div class="col-md-offset-4 col-md-8">
                   <div class="checkbox">
                     <label for="is-team-view-hidden">
-                      <input id="is-team-view-hidden" type="checkbox" name="is_team_view_hidden" {{# if company.is_team_view_hidden }} checked="checked"{{/if}}>Verberg Afdelingsoverzicht voor niet-beheerders
+                      <input id="is-team-view-hidden" type="checkbox" name="is_team_view_hidden" {{# if company.is_team_view_hidden }} checked="checked"{{/if}}>Hide Team View page for non-admin users
                     </label>
                     <p>
-                      <em>Wanneer ingeschakeld kunnen enkel beheerders het afdelingsoverzicht bekijken.</em>
+                      <em>If marked Team view page is shown only to admin users.</em>
                     </p>
                   </div>
                 </div>
@@ -107,7 +107,7 @@
 
               <div class="form-group">
                 <div class="col-md-offset-2 col-md-10">
-                  <button type="submit" class="btn btn-success pull-right single-click">Wijzigingen opslaan</button>
+                  <button type="submit" class="btn btn-success pull-right single-click">Save changes</button>
                 </div>
               </div>
             </form>
@@ -117,11 +117,11 @@
 
             <div class="form-horizontal">
               <div class="form-group">
-                <label for="" class="col-md-7 control-label">Backup afwezigheden</label>
+                <label for="" class="col-md-7 control-label">Backup employees' leave data</label>
               </div>
               <div class="form-group">
                 <div class="col-md-offset-2">
-                  <em>Maak een backup van alle werknemers en hun aanvragen. Het bestand is in <strong>.CSV</strong> formaat, compatibel met MS excel.</em>
+                  <em>Download the full list of employees with all their leave requests. The file is in <strong>.CSV</strong> format which is compatible with MS Excel.</em>
                 </div>
               </div>
               <div class="form-group">
@@ -131,7 +131,7 @@
               </div>
             </div>
 
-<form class="form-horizontal" method="POST" action="/settings/schedule" id="company_schedule_form">
+            <form class="form-horizontal" method="POST" action="/settings/schedule" id="company_schedule_form">
             <input type="hidden" name="company_wide" value="1">
             <div class="form-group">
               <label for="" class="col-md-6 control-label">Company week schedule</label>
@@ -153,20 +153,19 @@
             </div>
             </form>
 
-
             <div class="form-horizontal">
               <div class="form-group">
-                <label for="" class="col-md-10 control-label">Berekenen en overzetten van de niet opgebruikte dagen</label>
+                <label for="" class="col-md-10 control-label">Calculate and carry over unused allowance</label>
               </div>
               <div class="form-group">
                 <div class="col-md-offset-2">
-                  <p><em>Deze actie zal voor elke wernemer de niet gebruikte dagen overzetten van <strong>{{yearPrev}}</strong> naar het huidige jaar <strong>{{yearCurrent}}</strong>.</em></p>
-                  <p><em>!!! opgelet, het tegoed wordt aangepast van de werknemers.</em></p>
+                  <p><em>This action will carry over unused allowance for each employee from <strong>{{yearPrev}}</strong> to the current year, <strong>{{yearCurrent}}</strong>.</em></p>
+                  <p><em>Please note, employees allowance is going to be updated.</em></p>
                 </div>
               </div>
               <div class="form-group">
                 <form class="col-md-offset-2 col-md-11" id="calculate_carry_over_form" method="post" action="/settings/carryOverUnusedAllowance">
-                  <button class="btn btn-success pull-right single-click" type="submit"><i class="fa fa-share"></i> Overzetten</button>
+                  <button class="btn btn-success pull-right single-click" type="submit"><i class="fa fa-share"></i> Carry over allowance</button>
                 </form>
               </div>
             </div>
@@ -184,17 +183,17 @@
   <div class="col-md-7">
     <div class="panel panel-default">
       <div class="panel-heading">
-        Type verlof
+        Leave Types
       </div>
       <div class="panel-body">
         <div class="row">
           <div class="col-md-6">
-            <label class="control-label">Type verlof</label>
-            <p><em>Vink 1 aan om vanboven in de lijst weer te geven</em></p>
+            <label class="control-label">Leave Type Name</label>
+            <p><em>Tick one to always be on top of the list</em></p>
           </div>
           <div class="col-md-offset-3 col-md-2">
-            <label class="control-label">Limiet</label>
-            <p><em>Dagen/jaar</em></p>
+            <label class="control-label">Limit</label>
+            <p><em>Days/year</em></p>
           </div>
         </div>
 
@@ -205,7 +204,7 @@
 
         {{#unless leave_types.length }}
         <div class="row">
-          <div class="col-md-4">Geen gegevens</div>
+          <div class="col-md-4">No Leave type records</div>
         </div>
         {{/unless}}
 
@@ -234,11 +233,11 @@
           <div class="col-md-3">
             <div>
               <input name="use_allowance__{{ this.id }}" id="use_allowance__{{ this.id }}" type="checkbox" {{#if use_allowance}}checked="checked"{{/if}} data-tom-leave-type-order="allowance_{{@index}}">
-              <label for="use_allowance__{{ this.id }}" class="control-label">Gebruik tegoed</label>
+              <label for="use_allowance__{{ this.id }}" class="control-label">Use allowance</label>
             </div>
             <div>
               <input name="auto_approve__{{ this.id }}" id="auto_approve__{{ this.id }}" type="checkbox" {{#if auto_approve}}checked="checked"{{/if}} data-tom-leave-type-order="approve_{{@index}}">
-              <label for="auto_approve__{{ this.id }}" class="control-label">Auto goedkeuren</label>
+              <label for="auto_approve__{{ this.id }}" class="control-label">Auto approve</label>
             </div>
           </div>
           <div class="col-md-2">
@@ -258,8 +257,8 @@
         <div class="row">
           <div class="col-md-12">
             <div class="pull-right">
-              <button class="btn btn-default" data-toggle="modal" data-target="#add_new_leave_type_modal" type="button" id="add_new_leave_type_btn">Eén toevoegen</button>
-              <button type="submit" class="btn btn-success single-click">Wijzigingen opslaan</button>
+              <button class="btn btn-default" data-toggle="modal" data-target="#add_new_leave_type_modal" type="button" id="add_new_leave_type_btn">Add new</button>
+              <button type="submit" class="btn btn-success single-click">Save changes</button>
             </div>
           </div>
         </div>
@@ -271,11 +270,11 @@
   <div class="col-md-5 setting-general-2nd-column">
     <div class="panel panel-default">
       <div class="panel-heading">
-        Feestdagen
+        Bank Holidays
       </div>
       <div class="panel-body">
         <div class="row">
-          <div class="col-md-12 tst-no-bank-holidays">Feestdagen worden hier teruggevonden <a href="/settings/bankholidays/"></a></div>
+          <div class="col-md-12 tst-no-bank-holidays">Bank holidays could be found <a href="/settings/bankholidays/">here</a></div>
         </div>
       </div>
     </div>
@@ -289,7 +288,7 @@
   <div class="col-md-12">
     <div class="panel panel-danger">
       <div class="panel-heading">
-        <i class="fa fa-bomb"></i> Gevarenzone
+        <i class="fa fa-bomb"></i> Danger zone
       </div>
       <div class="panel-body">
 
@@ -297,16 +296,16 @@
 
             <div class="form-horizontal">
               <div class="form-group">
-                <label for="" class="control-label">Verwijder bedrijf</label>
+                <label for="" class="control-label">Remove company account</label>
               </div>
               <div class="form-group">
                 <div class="col-md-6">
-                  <p><em>Verwijder alle gegevens van het bedrijf {{company.name}}</em></p>
-                  <p><em> Deze actie kan niet worden teruggedraaid.</em></p>
-                  <p><em> Het wordt sterk aangeraden om de gegevens eerst te <a href="/settings/company/backup/">downloaden</a>.</em></p>
+                  <p><em>Completely erase data associated with {{company.name}}'s account.</em></p>
+                  <p><em> This is action cannot be reverted.</em></p>
+                  <p><em> It is strongly recommended to <a href="/settings/company/backup/">download</a> employees leave data first.</em></p>
                 </div>
                 <div class="col-md-6">
-                  <button class="btn btn-danger pull-right" data-toggle="modal" data-target="#remove_company_modal" type="button"><i class="fa fa-remove"></i> Verwijder bedrijf</button>
+                  <button class="btn btn-danger pull-right" data-toggle="modal" data-target="#remove_company_modal" type="button"><i class="fa fa-remove"></i> Delete company account</button>
                 </div>
               </div>
             </div>
