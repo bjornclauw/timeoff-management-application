@@ -1658,9 +1658,9 @@
 	$.fn.datepicker.Constructor = Datepicker;
 	var dates = $.fn.datepicker.dates = {
 		en: {
-			days: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+			days: ["Zondag", "Maandag", "Dinsdag", "Woensdag", "Donderdag", "Vrijdag", "Zaterdag"],
 			daysShort: ["Zon", "Maa", "Din", "Woe", "Don", "Vri", "Zat"],
-			daysMin: ["Zo", "Mo", "Di", "Wo", "Do", "Vr", "Za"],
+			daysMin: ["Zo", "Ma", "Di", "Wo", "Do", "Vr", "Za"],
 			months: ["Januari", "Februari", "Maart", "April", "Mei", "Juni", "Juli", "Augustus", "September", "Oktober", "November", "December"],
 			monthsShort: ["Jan", "Feb", "Maa", "Apr", "Mei", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dec"],
 			today: "Vandaag",
