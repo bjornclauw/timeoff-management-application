@@ -1,8 +1,8 @@
-Nieuwe TimeOff.Management account voor {{#with new_user }}{{this.full_name}}{{/with}}
+Nieuwe account voor {{#with new_user }}{{this.full_name}}{{/with}}
 =====
 <p>Hallo <strong>{{new_user.name}}</strong>,</p>
 
-<p><strong>{{#with admin_user}}{{this.full_name}}{{/with}}</strong> heeft juist een nieuwe account aangemaakt voor <strong>{{company.name}}</strong>.</p>
+<p><strong>{{#with admin_user}}{{this.full_name}}{{/with}}</strong> heeft juist een nieuwe account voor u aangemaakt bij <strong>{{company.name}}</strong>.</p>
 
 <p>Gelieve <strong>{{admin_user.name}}</strong> te contacteren voor uw gebruikersnaam en wachtwoord ivm {{> email/link href=(get_application_domain) text="TimeOff.Management" }}</p>
 
