@@ -171,7 +171,7 @@ $(document).ready(function(){
 
 $(document).ready(function(){
   $('.user-details-summary-trigger').popover({
-    title: 'Employee summary',
+    title: 'Samenvatting werknemer',
     html: true,
     trigger: 'hover',
     placement: 'auto',
@@ -238,7 +238,7 @@ $(document).ready(function() {
           if (!data || !data.length) {
             badge.addClass('hidden');
             dropDown.empty();
-            dropDown.append('<li class="dropdown-header">No notifications</li>')
+            dropDown.append('<li class="dropdown-header">Geen meldingen</li>')
 
             document.title = document.title.replace(/\(\d+\)\s*/, '');
 
