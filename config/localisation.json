@@ -3695,196 +3695,84 @@
       "name": "Belgique",
       "bank_holidays": [
         {
-          "date": "2018-01-01",
-          "name": "Nouvel An"
+          "date": "2023-01-01",
+          "name": "Nieuwjaar"
         },
         {
-          "date": "2018-04-01",
-          "name": "Pâques"
+          "date": "2023-04-10",
+          "name": "Paasmaandag"
         },
         {
-          "date": "2018-04-02",
-          "name": "Lundi de Pâques"
+          "date": "2023-05-01",
+          "name": "Dag van de Arbeid"
         },
         {
-          "date": "2018-05-01",
-          "name": "Fête du travail"
+          "date": "2023-05-18",
+          "name": "O.L.H. Hemelvaart"
         },
         {
-          "date": "2018-05-10",
-          "name": "Ascension"
+          "date": "2023-05-29",
+          "name": "Pinkstermaandag"
         },
         {
-          "date": "2018-05-20",
-          "name": "Pentecôte"
+          "date": "2023-07-21",
+          "name": "Nationale feestdag"
         },
         {
-          "date": "2018-05-21",
-          "name": "Lundi de Pentecôte"
+          "date": "2023-08-15",
+          "name": "O.L.V. Hemelvaart"
         },
         {
-          "date": "2018-07-21",
-          "name": "Fête nationale"
+          "date": "2023-11-01",
+          "name": "Allerheiligen"
         },
         {
-          "date": "2018-08-15",
-          "name": "Assomption"
+          "date": "2023-11-11",
+          "name": "Wapenstilstand"
         },
         {
-          "date": "2018-11-01",
-          "name": "Toussaint"
+          "date": "2023-12-25",
+          "name": "Kerstdag"
         },
         {
-          "date": "2018-11-11",
-          "name": "Armistice"
+          "date": "2024-01-01",
+          "name": "Nieuwjaar"
         },
         {
-          "date": "2018-12-25",
-          "name": "Noël"
+          "date": "2024-04-01",
+          "name": "Paasmaandag"
         },
         {
-          "date": "2019-01-01",
-          "name": "Nouvel An"
+          "date": "2024-05-01",
+          "name": "Dag van de Arbeid"
         },
         {
-          "date": "2019-04-21",
-          "name": "Pâques"
+          "date": "2024-05-09",
+          "name": "O.L.H. Hemelvaart"
         },
         {
-          "date": "2019-04-22",
-          "name": "Lundi de Pâques"
+          "date": "2024-05-20",
+          "name": "Pinkstermaandag"
         },
         {
-          "date": "2019-05-01",
-          "name": "Fête du travail"
+          "date": "2024-07-21",
+          "name": "Nationale feestdag"
         },
         {
-          "date": "2019-05-30",
-          "name": "Ascension"
+          "date": "2024-08-15",
+          "name": "O.L.V. Hemelvaart"
         },
         {
-          "date": "2019-06-09",
-          "name": "Pentecôte"
+          "date": "2024-11-01",
+          "name": "Allerheiligen"
         },
         {
-          "date": "2019-06-10",
-          "name": "Lundi de Pentecôte"
+          "date": "2024-11-11",
+          "name": "Wapenstilstand"
         },
         {
-          "date": "2019-07-21",
-          "name": "Fête nationale"
-        },
-        {
-          "date": "2019-08-15",
-          "name": "Assomption"
-        },
-        {
-          "date": "2019-11-01",
-          "name": "Toussaint"
-        },
-        {
-          "date": "2019-11-11",
-          "name": "Armistice"
-        },
-        {
-          "date": "2019-12-25",
-          "name": "Noël"
-        },
-        {
-          "date": "2020-01-01",
-          "name": "Nouvel An"
-        },
-        {
-          "date": "2020-04-12",
-          "name": "Pâques"
-        },
-        {
-          "date": "2020-04-13",
-          "name": "Lundi de Pâques"
-        },
-        {
-          "date": "2020-05-01",
-          "name": "Fête du travail"
-        },
-        {
-          "date": "2020-05-21",
-          "name": "Ascension"
-        },
-        {
-          "date": "2020-05-31",
-          "name": "Pentecôte"
-        },
-        {
-          "date": "2020-06-01",
-          "name": "Lundi de Pentecôte"
-        },
-        {
-          "date": "2020-07-21",
-          "name": "Fête nationale"
-        },
-        {
-          "date": "2020-08-15",
-          "name": "Assomption"
-        },
-        {
-          "date": "2020-11-01",
-          "name": "Toussaint"
-        },
-        {
-          "date": "2020-11-11",
-          "name": "Armistice"
-        },
-        {
-          "date": "2020-12-25",
-          "name": "Noël"
-        },
-        {
-          "date": "2021-01-01",
-          "name": "Nouvel An"
-        },
-        {
-          "date": "2021-04-04",
-          "name": "Pâques"
-        },
-        {
-          "date": "2021-04-05",
-          "name": "Lundi de Pâques"
-        },
-        {
-          "date": "2021-05-01",
-          "name": "Fête du travail"
-        },
-        {
-          "date": "2021-05-13",
-          "name": "Ascension"
-        },
-        {
-          "date": "2021-05-23",
-          "name": "Pentecôte"
-        },
-        {
-          "date": "2021-05-24",
-          "name": "Lundi de Pentecôte"
-        },
-        {
-          "date": "2021-07-21",
-          "name": "Fête nationale"
-        },
-        {
-          "date": "2021-08-15",
-          "name": "Assomption"
-        },
-        {
-          "date": "2021-11-01",
-          "name": "Toussaint"
-        },
-        {
-          "date": "2021-11-11",
-          "name": "Armistice"
-        },
-        {
-          "date": "2021-12-25",
-          "name": "Noël"
+          "date": "2024-12-25",
+          "name": "Kerstdag"
         }
       ]
     },
