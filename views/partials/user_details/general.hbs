@@ -27,8 +27,11 @@
       {{#each departments}}
           <option value="{{this.id}}" {{#if_equal ../employee.DepartmentId this.id}} selected="selected"{{/if_equal}}>{{this.name}} (approver {{this.boss.name}} {{this.boss.lastname}})</option>
       {{/each}}
+
+      {{!AFDELING = GEEN (afdelingID=0) onder companyID=0 () --> verborgen afdeling waar watchers kunnen worden toegevoegd}}
+      {{#with employee}}
       <option value="0" {{#if_equal ../employee.DepartmentId 0}} selected="selected"{{/if_equal}}>geen</option>
-  {{!-- <option value="{{this.id}}" {{#if_equal ../employee.DepartmentId this.id}}  --}}
+      {{/with}}
     </select>
     <span id="department_help" class="help-block">Afdeling waartoe de werknemer behoort. <a href="/settings/departments/edit/{{employee.DepartmentId}}">Meer gegevens <i class="fa fa-angle-double-right"></i></a></span>
   </div>
