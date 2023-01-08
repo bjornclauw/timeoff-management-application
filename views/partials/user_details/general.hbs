@@ -25,8 +25,9 @@
     <label for="select_inp" class="control-label">Afdeling</label>
     <select class="form-control" id="select_inp" name="department" aria-describedby="department_help">
       {{#each departments}}
-          <option value="{{this.id}}" selected="selected"{{/if_equal}}>{{this.name}} (approver {{this.boss.name}} {{this.boss.lastname}})</option>
+          <option value="{{this.id}}" {{#if_equal ../employee.DepartmentId this.id}} selected="selected"{{/if_equal}}>{{this.name}} (approver {{this.boss.name}} {{this.boss.lastname}})</option>
       {{/each}}
+      <option value="0">geen</option>
   {{!-- <option value="{{this.id}}" {{#if_equal ../employee.DepartmentId this.id}}  --}}
     </select>
     <span id="department_help" class="help-block">Afdeling waartoe de werknemer behoort. <a href="/settings/departments/edit/{{employee.DepartmentId}}">Meer gegevens <i class="fa fa-angle-double-right"></i></a></span>
